@@ -1,5 +1,27 @@
+                setup
+git config --global user.name "Your Name"
+git config --global user.email "your_email@example.com"
+
+
+                Repository Initialization
 git init
+git clone <repo_url>
+
 git status
+git log
+q
+
+                Staging / committing changes
+
+git add <filename>      (OR) 
+
 git add .
 git commit -m "message"
 git push origin main
+
+
+                to change filename
+git mv old_name.cpp new_name.cpp        use "filename"
+git commit -m "Renamed old_name.cpp to new_name.cpp"
+git push origin main
+
