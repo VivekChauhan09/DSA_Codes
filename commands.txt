@@ -1,9 +1,9 @@
-                setup
+1)                setup
 git config --global user.name "Your Name"
 git config --global user.email "your_email@example.com"
 
 
-                Repository Initialization
+2)                Repository Initialization
 git init
 git clone <repo_url>
 
@@ -11,7 +11,15 @@ git status
 git log
 q
 
-                Staging / committing changes
+
+3)                making new directory inside repo
+mkdir Strings(directory name)
+cd Strings
+
+to exit(go back one level) = cd ..
+
+
+4)                Staging / committing changes
 
 git add <filename>      (OR) 
 
@@ -20,8 +28,14 @@ git commit -m "message"
 git push origin main
 
 
-                to change filename
+5)                to change filename
 git mv old_name.cpp new_name.cpp        use "filename"
 git commit -m "Renamed old_name.cpp to new_name.cpp"
 git push origin main
 
+
+6)                to add new file using VScode
+git status (if you created a new file using CTRL+N then saved it ,it will throw untracked files)
+git add reverse_strings2.cpp
+git commit -m "Added reverse_string2.cpp in Strings folder"
+git push origin main
