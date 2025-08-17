@@ -1,0 +1,1 @@
+UPDATE student_details_sec_a SET attended_logic_lec = attended_logic_lec+1

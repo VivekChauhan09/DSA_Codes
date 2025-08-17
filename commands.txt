@@ -39,3 +39,10 @@ git status (if you created a new file using CTRL+N then saved it ,it will throw 
 git add reverse_strings2.cpp
 git commit -m "Added reverse_string2.cpp in Strings folder"
 git push origin main
+
+ 
+7)              to add new file using git
+code reverse_string2.cpp
+git add reverse_string2.cpp
+git commit -m "Added reverse string solution 2"
+git push origin main
