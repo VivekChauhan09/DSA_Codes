@@ -247,3 +247,62 @@ public:
         return l1;
     }
 };
+
+
+//                      leetcode 203
+class Solution {
+public:
+    ListNode* removeElements(ListNode* head, int val) {
+        while (head && head->val == val) {
+            head = head->next;
+        }
+        ListNode* temp = head;
+        ListNode* ptr = nullptr;
+        while (temp && temp->next) {
+            if (temp->next->val == val) {
+                ptr=temp->next;
+                temp->next = temp->next->next;
+                delete ptr;
+            } else {
+                temp = temp->next;
+            }
+        }
+        return head;
+    }
+};
+
+
+
+
+
+//                  leetcode 92
+class Solution {
+public:
+    ListNode* reverseBetween(ListNode* head, int left, int right) {
+        ListNode* dummy=new ListNode(0);
+        dummy->next=head;
+
+        ListNode* Lprev=dummy;
+        ListNode* curr=head;
+
+        for(int i=0;i<left-1;i++){
+            Lprev=Lprev->next;
+            curr=curr->next;
+        }
+
+        ListNode* ptr=curr;
+        ListNode* prev=nullptr;
+
+        for(int i=0;i<=right-left;i++){
+            ListNode* next=curr->next;
+            curr->next=prev;
+            prev=curr;
+            curr=next;
+        }
+
+        Lprev->next=prev;
+        ptr->next=curr;
+
+        return dummy->next;
+    }
+};
